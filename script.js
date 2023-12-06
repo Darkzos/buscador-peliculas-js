@@ -21,7 +21,7 @@ function displayMovies(movies){
     resultContainer.innerHTML = ''
 
     if(movies.length === 0) {
-        resultContainer.innerHTML = "<p> No se encontraron resultados para tu búsqueda </p>"
+        resultContainer.innerHTML = "<p> There were no results for your search </p>"
         return
     }
 
@@ -33,7 +33,7 @@ function displayMovies(movies){
         title.textContent = movie.title
 
         let releaseDate = document.createElement('p')
-        releaseDate.textContent = "La fecha de lanzamiento fue: " + movie.release_date
+        releaseDate.textContent = "The release date was: " + movie.release_date
     
         let overview = document.createElement('p')
         overview.textContent = movie.overview
@@ -43,7 +43,7 @@ function displayMovies(movies){
         poster.src= posterPath
 
         let voteAverage = document.createElement('p')
-        voteAverage.textContent = "La calificación promedio para esta pelicula es de: " + movie.vote_average.toFixed(1)
+        voteAverage.textContent = "The average score for this movie is: " + movie.vote_average.toFixed(1)
         
         let score = movie.vote_average.toFixed(1)
         let stars = ''
@@ -69,7 +69,7 @@ function displayMovies(movies){
         };
 
         let scoreStars = document.createElement('p')
-        scoreStars.textContent = "El rating promedio en estrellas es: " + stars
+        scoreStars.textContent = "The average rating stars for this movie is: " + stars
 
         movieDiv.appendChild(poster)
         movieDiv.appendChild(title)
